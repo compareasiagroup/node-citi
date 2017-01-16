@@ -10,24 +10,15 @@ describe('Citi', function() {
     var defaults = {};
     before(function() {
       defaults = {
+        protocol: "https",
+        host: "sandbox.apihub.citi.com",
         appSecret: null,
-        clientId: null,
-        request_options: {
-          headers: {
-            'Accept': '*/*',
-            'User-Agent': 'node-citi/' + VERSION
-          }
-        }
+        clientId: null
       };
     });
 
     it('create new instance', function() {
       var client = new Citi();
-      assert(client instanceof Citi);
-    });
-
-    it('auto constructs', function(){
-      var client = Citi();
       assert(client instanceof Citi);
     });
 
@@ -43,7 +34,7 @@ describe('Citi', function() {
       var options = {
         appSecret: 'abc123',
         extraOption: 'foo',
-        request_options: {
+        requestOptions: {
           headers: {
             'Accept': 'application/json'
           }
@@ -55,13 +46,22 @@ describe('Citi', function() {
       assert(client.options.hasOwnProperty('extraOption'));
       assert.equal(client.options.extraOption, options.extraOption);
 
-      assert.equal(client.options.consumer_key, options.consumer_key);
+      assert.equal(client.options.appSecret, options.appSecret);
 
       assert.equal(
-        client.options.request_options.headers.Accept,
-        options.request_options.headers.Accept);
+        client.options.requestOptions.headers.Accept,
+        options.requestOptions.headers.Accept);
     });
   });
 
-  //describe()
+  describe('Onboarding', function(){
+    describe('retrieve-products', function(){
+
+      it('methods are in place', function(){
+        var client = new Citi();
+        assert.equal("function", typeof client.getProducts);
+        assert.equal("function", typeof client.getProduct);
+      })
+    })
+  })
 });

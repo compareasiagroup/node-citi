@@ -7,12 +7,12 @@
   "keywords": [
     "citi"
   ],
-  "homepage": "https://github.com/compareasiagroup/node-citi",
+  "homepage": "https://github.com/zetta/node-citi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/compareasiagroup/node-citi.git"
+    "url": "https://github.com/zetta/node-citi.git"
   },
-  "author": "carlos.clemente@compareglobalgroup.com",
+  "author": "carlos@clemente.club",
   "contributors": [],
   "license": "MIT",
   "dependencies": {
