@@ -1,6 +1,6 @@
 {
   "name": "citi",
-  "version": "0.0.1-rc.1",
+  "version": "0.0.2-rc.1",
   "description": "Citi API client library",
   "main": "./lib/citi",
   "scripts": {},
