@@ -37,6 +37,25 @@
         "create-unsecured-credit-application": {
             "path": "/gcb/api/v1/apac/onboarding/products/unsecured/applications",
             "method": "POST"
+        },
+        "screen-unsecured-credit-application": {
+            "path": "/gcb/api/v1/apac/onboarding/products/unsecured/applications/{applicationId}/backgroundScreening",
+            "method": "POST"
+        },
+        "request-credit-application-decision": {
+            "path": "/gcb/api/v1/apac/onboarding/products/unsecured/applications/{applicationId}/inPrincipleApprovals",
+            "method": "POST"
+        },
+        "submit-application": {
+            "path": "/gcb/api/v1/apac/onboarding/products/unsecured/applications/{applicationId}/submission",
+            "method": "POST"
+        },
+        "check-application-status": {
+            "path": "/gcb/api/v1/apac/onboarding/products/unsecured/applications/{applicationId}/status",
+            "method": "GET",
+            "qs": {
+                "controlFlowId": null
+            }
         }
     }
 }
